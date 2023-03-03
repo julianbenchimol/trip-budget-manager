@@ -8,6 +8,19 @@ type User {
     email: String
 }
 
+type Trip {
+    _id: ID
+    name: String!
+    destination: String!
+    budget: Float!
+    dates: [Int]!
+}
+
+type Query {
+    users: [User]
+    trips: [Trip]
+}
+
 type Auth {
     token: ID
     user: User
