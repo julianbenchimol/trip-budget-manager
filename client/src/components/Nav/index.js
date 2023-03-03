@@ -38,10 +38,10 @@ function Nav() {
     }
     return (
         <header>
-         <nav>
-          {showNavigation()}
+        <nav>
+            {showNavigation()}
         </nav>
-      </header>
+    </header>
     );
 }
 

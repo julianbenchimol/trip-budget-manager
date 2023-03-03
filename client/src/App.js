@@ -42,7 +42,6 @@ function App() {
       <ApolloProvider client={client}>
         <Router>
           <div>
-          <StoreProvider>
             <Nav />
             <Routes>
               <Route 
@@ -58,7 +57,7 @@ function App() {
                 element={<Signup />} 
               />
             </Routes>
-          </StoreProvider>
+
 
           </div>
         </Router>
