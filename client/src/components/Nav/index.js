@@ -8,8 +8,18 @@ function Nav() {
             return (
                 <ul>
                     <li>
-                        <Link to= "/myTrips">
+                        <Link to = "/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to= "/mytrips">
                             My Trips
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to= "/newtrip">
+                            New Trip
                         </Link>
                     </li>
                     <li>

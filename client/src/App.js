@@ -14,8 +14,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
-import MyTrips from './pages/MyTrips'
-import NewTrip from './pages/NewTrip'
+import Footer from './components/Footer';
+import MyTrips from './pages/MyTrips';
+import NewTrip from './pages/NewTrip';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -46,10 +47,10 @@ function App() {
           <div>
             <Nav />
             <Routes>
-              {/* <Route 
+              <Route 
                 path="/" 
                 element={<Home />} 
-              /> */}
+              />
               <Route 
                 path="/login" 
                 element={<Login />} 
@@ -58,15 +59,16 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
-              {/* <Route 
+               <Route 
                 path = "/mytrips"
-                element = {<MyTrip/>}
+                element = {<MyTrips/>}
               />
               <Route
-                path = "newTrip"
+                path = "/newtrip"
                 element = {<NewTrip/>}
-              /> */}
+              /> 
             </Routes>
+            <Footer/>
           </div>
         </Router>
       </ApolloProvider>
