@@ -17,7 +17,7 @@ function Trip() {
             <div className="card-body">
               {" "}
               <h5 className="card-title">My Trip to:{}</h5>{" "}
-              <p className="card-text">Trip Budget{}</p>{" "}
+              <p className="card-text">Trip Budget:{}</p>{" "}
             </div>{" "}
             {/* Trip dates and (maybe friends) */}
             <div className="card-body">
