@@ -9,6 +9,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -17,6 +18,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import MyTrips from './pages/MyTrips';
 import NewTrip from './pages/NewTrip';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
