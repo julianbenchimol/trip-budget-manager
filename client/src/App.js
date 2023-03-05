@@ -19,6 +19,7 @@ import Footer from './components/Footer';
 import MyTrips from './pages/MyTrips';
 import NewTrip from './pages/NewTrip';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
