@@ -43,8 +43,38 @@
   flex-wrap: wrap;
   justify-content: space-between;
   justify-content: flex-end;
+  background-color: rgb(51, 50, 50);
 }
 
+
+.nav-item {
+  background-color: white;
+  color: black;
+  border-radius: 5px 5px 0px 0px;
+  margin-left: 5px;
+}
+
+a.nav-link:active {
+  color: black;
+  text-decoration: none;
+}
+
+a.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+a.nav-link:hover {
+  background-color: rgb(229, 229, 229);
+  color: black;
+}
+
+#navBarText {
+  display: flex;
+}
+
+
+/* =========================================== */
 #cardBtn {
   display: flex;
   justify-content: center;
