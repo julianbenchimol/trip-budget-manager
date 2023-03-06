@@ -9,8 +9,18 @@ function Nav() {
                 <ul className="nav nav-tabs" id="navBar">
                     {/* My Trips Tab: */}
                     <li className="nav-item">
-                        <Link to= "/myTrips" className="nav-link">
+                        <Link to = "/" className="nav-link">
+                            Home
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to= "/mytrips" className="nav-link">
                             My Trips
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to= "/newtrip" className="nav-link">
+                            New Trip
                         </Link>
                     </li>
 
