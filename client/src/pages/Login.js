@@ -31,7 +31,7 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <h2 className="mb-4 mt-4">Login</h2>
+      <h2 className="mb-4 mt-4 text-center">Login</h2>
       <form onSubmit={handleFormSubmit}>
         {/* Email Section: */}
         <div className="flex-row space-between my-2">
