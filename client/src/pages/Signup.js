@@ -32,52 +32,64 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
-
-      <h2>Signup</h2>
+      <h2 className='mt-4 mb-4 text-center'>Signup</h2>
       <form onSubmit={handleFormSubmit}>
+        {/* First Name: */}
         <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
+          <label htmlFor="firstName" className='form-label'>First Name:</label>
           <input
             placeholder="First"
             name="firstName"
             type="firstName"
             id="firstName"
             onChange={handleChange}
+            className='form-control'
           />
         </div>
+
+        {/* Last Name */}
         <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
+          <label htmlFor="lastName" className='form-label'>Last Name:</label>
           <input
             placeholder="Last"
             name="lastName"
             type="lastName"
             id="lastName"
             onChange={handleChange}
+            className='form-control'
           />
         </div>
+
+        {/* Email: */}
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email" className='form-label'>Email:</label>
           <input
             placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
+            className='form-control'
           />
         </div>
+
+        {/* Password */}
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="pwd" className='form label'>Password:</label>
           <input
             placeholder="******"
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
+            className='form-control'
           />
         </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+
+        {/* Buttons */}
+        <div className="flex-row flex-end mt-3">
+          <button type="submit" className='btn btn-primary'>Submit</button>
+          <Link to="/login" className='btn btn-success ms-4'>← Go to Login</Link>
         </div>
       </form>
     </div>
