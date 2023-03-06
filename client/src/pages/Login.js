@@ -31,33 +31,35 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-
-      <h2 className='mb-4 mt-4'>Login</h2>
+      <h2 className="mb-4 mt-4">Login</h2>
       <form onSubmit={handleFormSubmit}>
-
         {/* Email Section: */}
         <div className="flex-row space-between my-2">
-          <label htmlFor="email" className='form-label'>Email:</label>
+          <label htmlFor="email" className="form-label">
+            Email:
+          </label>
           <input
             placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
-            className='form-control'
+            className="form-control"
           />
         </div>
 
         {/* Password Section: */}
         <div className="flex-row space-between my-2 mb-4">
-          <label htmlFor="pwd" className='form-label'>Password:</label>
+          <label htmlFor="pwd" className="form-label">
+            Password:
+          </label>
           <input
             placeholder="******"
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
-            className='form-control'
+            className="form-control"
           />
         </div>
         {error ? (
@@ -68,11 +70,12 @@ function Login(props) {
 
         {/* Button Div */}
         <div className="flex-row flex-end">
-          <button type="submit" className='btn btn-primary mb-3'>Submit</button>
+          <button type="submit" className="btn btn-primary mb-3 me-5 ms-2">
+            Submit
+          </button>
+          <Link to="/signup" className="btn btn-success mb-3">← Go to Signup</Link>
         </div>
-
       </form>
-      <Link to="/signup">← Go to Signup</Link>
     </div>
   );
 }
