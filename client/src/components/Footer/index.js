@@ -1,6 +1,6 @@
 import React from "react";
 function Footer(){
     return(
-<p>contact us</p>
+<p className="text-center mt-5">contact us</p>
 )}
 export default Footer

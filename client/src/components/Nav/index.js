@@ -6,39 +6,46 @@ function Nav() {
     function showNavigation() {
         if(Auth.loggedIn()) {
             return (
-                <ul>
-                    <li>
-                        <Link to = "/">
+                <ul className="nav nav-tabs" id="navBar">
+                    {/* My Trips Tab: */}
+                    <li className="nav-item">
+                        <Link to = "/" className="nav-link">
                             Home
                         </Link>
                     </li>
-                    <li>
-                        <Link to= "/mytrips">
+                    <li className="nav-item">
+                        <Link to= "/mytrips" className="nav-link">
                             My Trips
                         </Link>
                     </li>
-                    <li>
-                        <Link to= "/newtrip">
+                    <li className="nav-item">
+                        <Link to= "/newtrip" className="nav-link">
                             New Trip
                         </Link>
                     </li>
-                    <li>
-                        <a href="/" onClick={()=> Auth.logout()}>
+
+                    {/* Logout Tab: */}
+                    <li className="nav-item">
+                        <a href="/" onClick={()=> Auth.logout()} className='nav-link'>
                             Logout
                         </a>
                     </li>
                 </ul>
             );
         } else {
+            // If NOT logged in
             return (
-                <ul>
-                    <li>
-                        <Link to= "/signup">
+                <ul className="nav nav-tabs" id="navBar">
+                    {/* Signup Tab */}
+                    <li className="nav-item">
+                        <Link to= "/signup" className="nav-link">
                             Signup
                         </Link>
                     </li>
-                    <li>
-                        <Link to ="/login">
+
+                    {/* Login Tab */}
+                    <li className="nav-item">
+                        <Link to ="/login" className="nav-link">
                             Login
                         </Link>
                     </li>

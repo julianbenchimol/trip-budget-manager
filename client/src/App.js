@@ -16,7 +16,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import MyTrips from './pages/MyTrips';
+import MyTrips from './pages/Mytrips';
 import NewTrip from './pages/NewTrip';
 
 
@@ -61,7 +61,7 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
-               <Route 
+              <Route 
                 path = "/mytrips"
                 element = {<MyTrips/>}
               />
