@@ -30,8 +30,8 @@ function Trip() {
 
             {/* edit and delete button */}
             <div className="card-footer" id="cardBtn">
-              <button type="button" className="btn btn-warning me-2">Edit trip</button>
-              <button type="button" className="btn btn-danger">Cancel trip</button>
+              <button type="button" className="btn btn-outline-warning text-secondary me-2">Edit trip</button>
+              <button type="button" className="btn btn-outline-danger">Cancel trip</button>
             </div>{" "}
           </div>{" "}
         </div>

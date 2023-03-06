@@ -12,7 +12,7 @@ const Home = () => {
                     <input className= "form-control" placeholder="Search here" aria-label='Search'></input>
                     <button type="submit" className="btn btn-primary ms-2">Search</button>
                 </div>
-        <div className='mb-4'>
+        <div className='mb-4 text-center'>
             <h3>Welcome to ____ conveniently plan and budget for you trip</h3>
         </div>
 
