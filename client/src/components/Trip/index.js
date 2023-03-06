@@ -13,22 +13,24 @@ function Trip() {
               className="card-img-top"
               alt={}
             />{" "} */}
+
             {/* Trip name and trip budget */}
             <div className="card-body">
               {" "}
               <h5 className="card-title">My Trip to:{}</h5>{" "}
               <p className="card-text">Trip Budget:{}</p>{" "}
             </div>{" "}
+
             {/* Trip dates and (maybe friends) */}
             <div className="card-body">
               {" "}
               <h5 className="card-title"></h5>{" "}
               <p className="card-text">{}</p>{" "}
             </div>{" "}
+
             {/* edit and delete button */}
-            <div className="card-footer">
-              
-              <button type="button" className="btn btn-warning">Edit trip</button>
+            <div className="card-footer" id="cardBtn">
+              <button type="button" className="btn btn-warning me-2">Edit trip</button>
               <button type="button" className="btn btn-danger">Cancel trip</button>
             </div>{" "}
           </div>{" "}

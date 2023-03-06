@@ -8,7 +8,7 @@ import Trip from '../components/Trip'
 function MyTrips(){
     return(
         <div>
-        <h2>My Trips</h2>
+        <h2 className='text-center mt-4'>My Trips</h2>
         <Trip/>
         </div>
     )
