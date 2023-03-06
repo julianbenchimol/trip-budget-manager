@@ -7,17 +7,16 @@ function Nav() {
         if(Auth.loggedIn()) {
             return (
                 <ul className="nav nav-tabs" id="navBar">
-
                     {/* My Trips Tab: */}
                     <li className="nav-item">
-                        <Link to= "/myTrips">
+                        <Link to= "/myTrips" className="nav-link">
                             My Trips
                         </Link>
                     </li>
-                    
+
                     {/* Logout Tab: */}
                     <li className="nav-item">
-                        <a href="/" onClick={()=> Auth.logout()}>
+                        <a href="/" onClick={()=> Auth.logout()} className='nav-link'>
                             Logout
                         </a>
                     </li>
@@ -27,17 +26,16 @@ function Nav() {
             // If NOT logged in
             return (
                 <ul className="nav nav-tabs" id="navBar">
-
                     {/* Signup Tab */}
                     <li className="nav-item">
-                        <Link to= "/signup">
+                        <Link to= "/signup" className="nav-link">
                             Signup
                         </Link>
                     </li>
 
                     {/* Login Tab */}
                     <li className="nav-item">
-                        <Link to ="/login">
+                        <Link to ="/login" className="nav-link">
                             Login
                         </Link>
                     </li>
