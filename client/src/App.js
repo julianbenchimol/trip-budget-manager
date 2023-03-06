@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
