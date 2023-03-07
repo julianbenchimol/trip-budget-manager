@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import searchLocation from '../utils/api'
+import axios from 'axios';
 
 
 const Home = () => {
@@ -12,10 +13,26 @@ const Home = () => {
 
     const submitHandler = function(event){
         event.preventDefault();
-        // console.log(query)
-        // const locationData = searchLocation(query);
-        // setResults(locationData);
+        console.log(query)
+        const options = {
+            method: "POST",
+            url: "https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US",
+            params: {currency: 'USD', lang: 'en_US', units: 'mi'},
+            headers: {
+                    'content-type': 'application/json',
+                    'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
+                    'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+            },
+            data: `{"query": "${query}", "updateToken": ""}`
+        }
+        axios.request(options)
+        .then(function(response){
+             setResults(response.data.data.AppPresentation_queryAppSearch.sections)
+             console.log(results)
+        })
+        .catch((err) => console.log(err))
     }
+
     const queryHandler = function(event){
         setQuery(event.target.value)
     }

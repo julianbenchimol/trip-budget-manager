@@ -1,46 +1,25 @@
 import axios from 'axios'
 
-const options = {
-    method: "POST",
-    url: "https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US"
-}
-
-const headers = {
-    'content-type': 'application/json',
-    'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
-    'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
-}
-
 const searchLocation = (query) => {
-    const data = {
-       "query": `"${query}"`,
-       "updateToken": ""
+
+    const options = {
+        method: "POST",
+        url: "https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US",
+        params: {currency: 'USD', lang: 'en_US', units: 'mi'},
+        headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
+                'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+        },
+        data: `{"query": "${query}", "updateToken": ""}`
     }
 
-    axios.post(`https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US`, data, {
-        headers: headers
+    axios.request(options).then(function(response){
+        const locationData = response.data.data.AppPresentation_queryAppSearch.sections
+        //console.log(locationData)
+        return locationData;
     })
-    .then((data) => {
-
-        console.log("Data Aquired from API Util")
-    })
-    .catch(err => console.log(err))
-}
-
-const searchHotels = ({hotelInfo}) => {
-    const queryData = {
-        "geoId": hotelInfo.geoId,
-        "checkIn": hotelInfo.checkIn,
-        "checkOut": hotelInfo.checkOut,
-        "sort": "PRICE_LOW_TO_HIGH",
-        "sortOrder": "asc",
-        "updateToken": "" 
-    }
-axios.post(`'https://travel-advisor.p.rapidapi.com/hotels/v2/list?currency=USD&units=km&lang=en_US'`, queryData, {
-    headers: headers
-    })
-    .then(({data}) => console.log(data))
-    .catch(err => console.log(err))
+    .catch((err) => console.log(err))
 }
 
 export default searchLocation;
