@@ -31,41 +31,48 @@ function Signup() {
   };
 
   return (
-    <div className="container my-1">
-      <h2 className="mt-4 mb-4 text-center">Signup</h2>
+    <div
+      className="container my-1 bg-success p-2 text-dark bg-opacity-50 mt-5"
+      id="userCard"
+    >
+      <h2 className="mt-4 mb-4 text-center fw-bold fst-italic">
+        Sign Up here!
+      </h2>
       <form onSubmit={handleFormSubmit}>
         {/* First Name: */}
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName" className="form-label">
-            First Name:
-          </label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
+        <div className="row g-3 text-center">
+          <div className="flex-row space-between my-2 col-sm">
+            <label htmlFor="firstName" className="form-label">
+              First Name:
+            </label>
+            <input
+              placeholder="ex: John"
+              name="firstName"
+              type="firstName"
+              id="firstName"
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
 
-        {/* Last Name */}
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName" className="form-label">
-            Last Name:
-          </label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-            className="form-control"
-          />
+          {/* Last Name */}
+          <div className="flex-row space-between my-2 col-sm">
+            <label htmlFor="lastName" className="form-label">
+              Last Name:
+            </label>
+            <input
+              placeholder="ex: Wayne"
+              name="lastName"
+              type="lastName"
+              id="lastName"
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
         </div>
 
         {/* Email: */}
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 text-center">
           <label htmlFor="email" className="form-label">
             Email:
           </label>
@@ -80,7 +87,7 @@ function Signup() {
         </div>
 
         {/* Password */}
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 text-center">
           <label htmlFor="pwd" className="form label">
             Password:
           </label>
@@ -99,7 +106,7 @@ function Signup() {
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
-          <Link to="/login" className="btn btn-success ms-4">
+          <Link to="/login" className="btn btn-dark ms-4">
             ← Go to Login
           </Link>
         </div>

@@ -86,3 +86,17 @@ a.nav-link:hover {
   width: 10%;
   height: 10%;
 }
+
+/* ============================================ */
+
+/* Sign Up & Login Card */
+#userCard {
+  border-radius: 10px 10px 10px 10px;
+  width: 50%;
+}
+
+/* MyTrips Card */
+#myTripsCard {
+  border-radius: 10px 10px 10px 10px;
+  width: 90%;
+}
