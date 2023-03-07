@@ -1,4 +1,6 @@
 const { Trip, User } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -7,7 +9,7 @@ const resolvers = {
       return await Trip.find({})
     },
 
-    users: async () => {
+    users: async (parent, args) => {
       // Populate the professor subdocument when querying for classes
       return await User.find({});
     }
