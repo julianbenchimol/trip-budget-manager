@@ -11,25 +11,25 @@ const searchLocation = (query) => {
                 'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
             },
             data: `{"query": "${query}", "updateToken": ""}`
-      }
+    }
     
     const response = axios.request(queryOptions)
-    const locationSections = response.data.data.AppPresentation_queryAppSearch.sections;
+    const locationSections = response.data.data.AppPresentation_queryAppSearch.sections
     const cardSections = []
-    for(let i = 0; i < locationSections.length; i ++){
-        if(locationSections[i].__typename === "AppPresentation_SingleCard"){
-            cardSections.push(locationSections[i].appSearchCardContent)
+        for(let location in locationSections){
+            if(locationSections[location].__typename === "AppPresentation_SingleCard"){
+                cardSections.push(locationSections[location].appSearchCardContent)
+            }
         }
-    }
 
     const cardData = cardSections.map((result) =>{
         return{
             cardName: result.cardTitle.string,
             cardInfo: result.primaryInfo.text,
-            cardId: result.saveId.id
+            cardId: result.saveId
         }
     })
     return cardData;
 }
 
-export default searchLocation;
+export default searchLocation

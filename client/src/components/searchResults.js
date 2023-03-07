@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import ResultList from "./resultList";
-import {searchLocation} from '../utils/api' 
-
+import ResultList from "./ResultList";
+import searchLocation from '../utils/api'
 const SearchResults = () =>{
       
   const [query, setQuery] = useState("")
   const [results, setResults] = useState([])
 
-  const queryOptionHandler = function(event){
+  const queryHandler = function(event){
     event.preventDefault();
-    setQuery(event.target.value)
+    const locationQuery = document.getElementById('#location-value').value;
+    setQuery(locationQuery)
   }
 
   const getLocationData = async(query) =>{
@@ -19,14 +19,16 @@ const SearchResults = () =>{
 
   useEffect(() =>{
     getLocationData(query)
-  })
+  }, [query])
 
   return(
     <div>
       <div className="container-fluid">
         <div className="d-flex mb-4" role='search'>
-            <input className="form-control" placeholder="Search" onChange={queryOptionHandler}/>
+          <form onSubmit={queryHandler}>
+            <input id = "#location-value" className="form-control" placeholder="Search"/>
             <button type = "submit" className="btn btn-primary ms-2">Search</button>
+          </form>
         </div>
       </div>
       <ResultList results = {results}/>
