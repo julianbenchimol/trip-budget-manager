@@ -20,6 +20,10 @@ const tripSchema = new Schema({
         type: String,
         required: true
     },
+    trips: {
+        type: Schema.Types.ObjectId,
+        ref: 'Trip'
+    }
 //    chat: {future development
 //    }
 });
