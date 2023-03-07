@@ -30,7 +30,10 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1 bg-success p-2 text-dark bg-opacity-50 mt-5" id='userCard'>
+    <div
+      className="container my-1 bg-success p-2 text-dark bg-opacity-50 mt-5"
+      id="userCard"
+    >
       <h2 className="mb-4 mt-4 text-center fst-italic fw-bold">Login Here!</h2>
       <form onSubmit={handleFormSubmit}>
         {/* Email Section: */}
@@ -69,11 +72,13 @@ function Login(props) {
         ) : null}
 
         {/* Button Div */}
-        <div className="flex-row flex-end">
+        <div className="flex-row flex-end d-flex justify-content-center">
           <button type="submit" className="btn btn-primary mb-3 me-3 ms-2">
-            Submit
+            Login
           </button>
-          <Link to="/signup" className="btn btn-dark mb-3">← Go to Signup</Link>
+          <Link to="/signup" className="btn btn-dark mb-3">
+            ← Go to Signup
+          </Link>
         </div>
       </form>
     </div>
