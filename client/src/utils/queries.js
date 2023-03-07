@@ -15,7 +15,7 @@ export const QUERY_USER = gql`
       firstName
       lastName
       email
-      trip{
+      trips{
         name
         destination
         budget

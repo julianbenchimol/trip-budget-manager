@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+const Trip = require('./Trip');
 const bcrypt = require('bcrypt');
 
 
@@ -24,7 +25,8 @@ const userSchema = new Schema({
       type: String,
       required: true,
       minlength: 5
-    }
+    },
+    trips: [Trip.schema]
 });
 
 
