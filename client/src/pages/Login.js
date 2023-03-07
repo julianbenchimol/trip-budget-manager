@@ -49,7 +49,7 @@ function Login(props) {
         </div>
 
         {/* Password Section: */}
-        <div className="flex-row space-between my-2 mb-4">
+        <div className="flex-row space-between my-2 mb-4 ">
           <label htmlFor="pwd" className="form-label">
             Password:
           </label>
