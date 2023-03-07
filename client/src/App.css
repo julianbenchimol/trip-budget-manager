@@ -86,3 +86,10 @@ a.nav-link:hover {
   width: 10%;
   height: 10%;
 }
+
+/* ============================================ */
+
+/* Sign Up Card */
+#signUpCard {
+  border-radius: 10px 10px 10px 10px;
+}
