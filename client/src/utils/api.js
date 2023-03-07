@@ -1,5 +1,10 @@
 import axios from 'axios'
 
+const options = {
+    method: "POST",
+    url: "https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US"
+}
+
 const headers = {
     'content-type': 'application/json',
     'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
@@ -15,7 +20,10 @@ const searchLocation = (query) => {
     axios.post(`https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US`, data, {
         headers: headers
     })
-    .then(({data}) => console.log(data))
+    .then((data) => {
+
+        console.log("Data Aquired from API Util")
+    })
     .catch(err => console.log(err))
 }
 
@@ -35,4 +43,4 @@ axios.post(`'https://travel-advisor.p.rapidapi.com/hotels/v2/list?currency=USD&u
     .catch(err => console.log(err))
 }
 
-module.exports = {searchLocation, searchHotels};
+export default searchLocation;
