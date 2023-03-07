@@ -8,7 +8,7 @@ function Nav() {
             return (
                 <div id="navBar">
                     <div className="container-fluid">
-                        <span className="text-light fs-3" id="navBarText">Your travel planning Website!</span>
+                        <p className="text-light fs-2 fst-italic fw-bold text-wrap mt-2" id="navBarText">Your travel planning Website!</p>
                     </div>
                     <ul className="nav nav-tabs" id="navBar">
                     {/* My Trips Tab: */}
@@ -42,7 +42,7 @@ function Nav() {
             return (
                 <div id="navBar">
                     <div className="container-fluid">
-                        <span className="text-light fs-3" id="navBarText">Your travel planning Website!</span>
+                        <p className="text-light fs-2 fst-italic fw-bold text-wrap mt-2" id="navBarText">Your travel planning Website!</p>
                     </div>
                         <ul className="nav nav-tabs" id="navBarItems">
                     {/* Signup Tab */}
