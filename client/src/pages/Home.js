@@ -16,7 +16,7 @@ const Home = () => {
         console.log(query)
         const options = {
             method: "POST",
-            url: "https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US",
+            url: "https://travel-advisor.p.rapidapi.com/locations/v2/search",
             params: {currency: 'USD', lang: 'en_US', units: 'mi'},
             headers: {
                     'content-type': 'application/json',
@@ -29,6 +29,12 @@ const Home = () => {
         .then(function(response){
              setResults(response.data.data.AppPresentation_queryAppSearch.sections)
              console.log(results)
+             let resultsArray = []
+             for(let i = 0; i < results.length; i++){
+                if(results[i].__typename === "AppPresentation_SingleCard"){
+                    resultsArray.push(results[i].appSearchCardContent)
+                }
+             }
         })
         .catch((err) => console.log(err))
     }
@@ -51,9 +57,7 @@ const Home = () => {
         </div>
         <div id='results-list'>
             <ul className='list-group'>
-                {/* {results.map(result =>{
-                    <li>{result}</li>
-                })} */}
+
             </ul>
         </div>
     </div>
