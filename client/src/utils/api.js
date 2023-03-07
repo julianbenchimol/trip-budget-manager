@@ -1,25 +1,35 @@
 import axios from 'axios'
 
 const searchLocation = (query) => {
-
-    const options = {
+    const queryOptions = {
         method: "POST",
-        url: "https://travel-advisor.p.rapidapi.com/locations/v2/search?currency=USD&units=km&lang=en_US",
+        url: "https://travel-advisor.p.rapidapi.com/locations/v2/search",
         params: {currency: 'USD', lang: 'en_US', units: 'mi'},
         headers: {
                 'content-type': 'application/json',
                 'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
                 'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
-        },
-        data: `{"query": "${query}", "updateToken": ""}`
+            },
+            data: `{"query": "${query}", "updateToken": ""}`
+      }
+    
+    const response = axios.request(queryOptions)
+    const locationSections = response.data.data.AppPresentation_queryAppSearch.sections;
+    const cardSections = []
+    for(let i = 0; i < locationSections.length; i ++){
+        if(locationSections[i].__typename === "AppPresentation_SingleCard"){
+            cardSections.push(locationSections[i].appSearchCardContent)
+        }
     }
 
-    axios.request(options).then(function(response){
-        const locationData = response.data.data.AppPresentation_queryAppSearch.sections
-        //console.log(locationData)
-        return locationData;
+    const cardData = cardSections.map((result) =>{
+        return{
+            cardName: result.cardTitle.string,
+            cardInfo: result.primaryInfo.text,
+            cardId: result.saveId.id
+        }
     })
-    .catch((err) => console.log(err))
+    return cardData;
 }
 
 export default searchLocation;
