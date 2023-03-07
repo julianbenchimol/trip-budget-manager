@@ -8,20 +8,24 @@ function Nav() {
             return (
                 <div id="navBar">
                     <div className="container-fluid">
-                        <span className="text-light fs-3" id="navBarText">Your travel planning Website!</span>
+                        <p className="text-light fs-2 fst-italic fw-bold text-wrap mt-2" id="navBarText">Your travel planning Website!</p>
                     </div>
                     <ul className="nav nav-tabs" id="navBar">
-                    {/* My Trips Tab: */}
+
+                        {/* Home */}
                         <li className="nav-item">
                             <Link to = "/" className="nav-link">
                                 Home
                             </Link>
                         </li>
+
+                         {/* My Trips Tab: */}
                         <li className="nav-item">
                             <Link to= "/mytrips" className="nav-link">
                                 My Trips
                             </Link>
                         </li>
+
                         <li className="nav-item">
                             <Link to= "/newtrip" className="nav-link">
                                 New Trip
@@ -42,9 +46,17 @@ function Nav() {
             return (
                 <div id="navBar">
                     <div className="container-fluid">
-                        <span className="text-light fs-3" id="navBarText">Your travel planning Website!</span>
+                        <p className="text-light fs-2 fst-italic fw-bold text-wrap mt-2" id="navBarText">Your travel planning Website!</p>
                     </div>
                         <ul className="nav nav-tabs" id="navBarItems">
+
+                    {/* Home Tab */}
+                                                    <li className="nav-item">
+                            <Link to = "/" className="nav-link">
+                                Home
+                            </Link>
+                        </li>
+
                     {/* Signup Tab */}
                             <li className="nav-item">
                                 <Link to= "/signup" className="nav-link">
