@@ -79,3 +79,10 @@ a.nav-link:hover {
   display: flex;
   justify-content: center;
 }
+
+
+/* Footer */
+.icon {
+  width: 10%;
+  height: 10%;
+}
