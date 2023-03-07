@@ -31,7 +31,7 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1 bg-success p-2 text-dark bg-opacity-50 mt-5" id='signUpCard'>
+    <div className="container my-1 bg-success p-2 text-dark bg-opacity-50 mt-5" id='userCard'>
       <h2 className="mt-4 mb-4 text-center fw-bold fst-italic">Sign Up here!</h2>
       <form onSubmit={handleFormSubmit}>
         {/* First Name: */}

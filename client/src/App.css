@@ -89,7 +89,7 @@ a.nav-link:hover {
 
 /* ============================================ */
 
-/* Sign Up Card */
-#signUpCard {
+/* Sign Up & Login Card */
+#userCard {
   border-radius: 10px 10px 10px 10px;
 }
