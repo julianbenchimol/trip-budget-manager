@@ -92,6 +92,7 @@ a.nav-link:hover {
 /* Sign Up & Login Card */
 #userCard {
   border-radius: 10px 10px 10px 10px;
+  width: 50%;
 }
 
 /* MyTrips Card */

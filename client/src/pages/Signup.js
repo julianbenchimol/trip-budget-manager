@@ -40,8 +40,8 @@ function Signup(props) {
       </h2>
       <form onSubmit={handleFormSubmit}>
         {/* First Name: */}
-        <div className='row g-3 text-center'>
-          <div className="flex-row space-between my-2 col">
+        <div className="row g-3 text-center">
+          <div className="flex-row space-between my-2 col-sm">
             <label htmlFor="firstName" className="form-label">
               First Name:
             </label>
@@ -56,7 +56,7 @@ function Signup(props) {
           </div>
 
           {/* Last Name */}
-          <div className="flex-row space-between my-2 col">
+          <div className="flex-row space-between my-2 col-sm">
             <label htmlFor="lastName" className="form-label">
               Last Name:
             </label>
