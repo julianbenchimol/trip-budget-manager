@@ -3,12 +3,14 @@ const api = require('../../client/src/utils/api');
 const {Schema} = mongoose;
 
 const geoSchema = new Schema({
-    hotels: {
+    hotelName: {
         type: String,
-        name: String,
-        location_string: String,
-        
+        required: true
     },
+    hotelLocation: {
+        type: String,
+        required: true
+    }
 //    restauraunts: {
 //    },
 //    attractions: {

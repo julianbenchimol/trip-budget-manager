@@ -19,7 +19,7 @@ const tripSchema = new Schema({
     dates: {
         type: String,
         required: true
-    },
+    }
 //    chat: {future development
 //    }
 });
