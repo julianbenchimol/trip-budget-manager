@@ -7,6 +7,7 @@ const typeDefs = gql`
     lastName: String
     email: String
     password: String
+    trips: [Trip]
   }
 
   type Trip {
@@ -35,6 +36,12 @@ const typeDefs = gql`
       password: String!
     ): Auth
     login(email: String!, password: String!): Auth
+    addTrip(
+      name: String!
+      destination: String!
+      budget: String!
+      dates: String
+    ): Trip
   }
 `;
 

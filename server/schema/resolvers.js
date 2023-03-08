@@ -20,6 +20,14 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addTrip: async(parent, { trips }, context) => {
+      console.log(context);
+      if (context.user) {
+        const mytrip = new Trip({ trips});
+        await User.findByIdAndUpdate(context.user._id, { $push: { trips: mytrip }} );
+        return mytrip;
+      }
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
