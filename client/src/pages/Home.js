@@ -10,7 +10,7 @@ const Home = () => {
     return (
     <div className = "container-fluid">
         <div className='mb-4 mt-5 text-center'>
-            <h3>Welcome to Pack & Go! Our goal is to conveniently plan and budget your trip!</h3>
+            <h3 className=''>Welcome to Pack & Go! Our goal is to conveniently plan and budget your trip!</h3>
         </div>
         <div id='results-list'>
             <ul className='list-group'>
