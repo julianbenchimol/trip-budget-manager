@@ -7,7 +7,13 @@ function ResultList(props){
     <div>
         <ul>
             {props.results.map(function(card, i){
-                return <li key = {i}>{card.cardName}</li>
+                return (
+                <li key = {i}>
+                    <h3>{card.cardName}</h3>
+                    <p>{card.cardInfo}</p>
+                    <button className="btn btn-primary">Choose Location</button>
+                </li>
+                )
             })}
         </ul>
     </div>
