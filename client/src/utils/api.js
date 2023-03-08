@@ -40,4 +40,5 @@ const searchLocation = (query) => {
         return cardData
     })
 }
+
 export default searchLocation
