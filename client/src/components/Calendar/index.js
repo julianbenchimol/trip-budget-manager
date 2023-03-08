@@ -5,17 +5,22 @@ import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
 
 export default class DemoApp extends React.Component {
+
   render() {
     return (
-      <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        dateClick={this.handleDateClick}
-      />
+      <div>
+        <FullCalendar
+          headerToolbar={{
+            left: "prev, next today",
+            center: "title",
+            right: "dayGridMonth, timeGridDay",
+          }}
+          plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
+          initialView="dayGridMonth"
+        />
+      </div>
     );
   }
-
-  handleDateClick = (arg) => {
-    // bind with an arrow function
-    alert(arg.dateStr);
-  };
 }
+
+
