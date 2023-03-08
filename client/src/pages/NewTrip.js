@@ -2,18 +2,18 @@
 import Calendar from '../components/Calendar'
 function newTrip(){
     return(
-        <div className = "container">
+        <div className = "container" id='body-container'>
             <h2 className='text-center mt-4 mb-5 fs-1 fst-italic fw-bold'>Plan A New Trip</h2>
 
-            <div className = "row">
+            <div className = "row d-flex justify-content-center">
 
                 {/* Calender Section */}
-                <div className = "col-6">
+                <div className = "col-md-6">
                     <Calendar />
                 </div>
 
                 {/* Forum Section: */}
-                <div className='col-6 bg-success p-2 text-dark bg-opacity-50 mt-5' id='userCard'>
+                <div className='col-md-6 bg-success p-2 text-dark bg-opacity-50 mt-5 mb-5' id='userCard'>
                     <form >
                     <div className='mt-3 fw-bold'>
                         {/* Location: */}
