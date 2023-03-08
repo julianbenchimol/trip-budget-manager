@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
-import { ADD_USER } from '../utils/mutations';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+import { ADD_USER } from "../utils/mutations";
 
-function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+function Signup() {
+  const [formState, setFormState] = useState({ firstName: "", lastName: "", email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -102,11 +102,11 @@ function Signup(props) {
         </div>
 
         {/* Buttons */}
-        <div className="flex-row flex-end mt-3">
-          <button type="submit" className="btn btn-primary">
-            Submit
+        <div className="flex-row flex-end mt-3 d-flex justify-content-center">
+          <button type="submit" className="btn btn-primary mb-3">
+            Signup
           </button>
-          <Link to="/login" className="btn btn-dark ms-4">
+          <Link to="/login" className="btn btn-dark ms-4 mb-3">
             ← Go to Login
           </Link>
         </div>

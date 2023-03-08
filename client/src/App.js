@@ -70,8 +70,8 @@ function App() {
                 element = {<NewTrip/>}
               /> 
             </Routes>
-            <Footer/>
           </div>
+          <Footer/>
         </Router>
       </ApolloProvider>
     

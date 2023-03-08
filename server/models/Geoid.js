@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
-
+// const api = require('../../client/src/utils/api');
 const {Schema} = mongoose;
 
 const geoSchema = new Schema({
-    hotels: {
+    hotelName: {
         type: String,
-        
+        required: true
     },
+    hotelLocation: {
+        type: String,
+        required: true
+    }
 //    restauraunts: {
 //    },
 //    attractions: {

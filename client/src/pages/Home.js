@@ -19,7 +19,6 @@ const Home = () => {
             </ul>
         </div>
     </div>
-
     )
 }
 export default Home

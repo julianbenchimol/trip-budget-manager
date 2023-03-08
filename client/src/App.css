@@ -81,10 +81,10 @@ a.nav-link:hover {
 }
 
 
-/* Footer */
-.icon {
-  width: 10%;
-  height: 10%;
+/* Body Container */
+#body-container
+{
+  min-height: 100vh;
 }
 
 /* ============================================ */
