@@ -102,11 +102,11 @@ function Signup() {
         </div>
 
         {/* Buttons */}
-        <div className="flex-row flex-end mt-3">
-          <button type="submit" className="btn btn-primary">
-            Submit
+        <div className="flex-row flex-end mt-3 d-flex justify-content-center">
+          <button type="submit" className="btn btn-primary mb-3">
+            Signup
           </button>
-          <Link to="/login" className="btn btn-dark ms-4">
+          <Link to="/login" className="btn btn-dark ms-4 mb-3">
             ← Go to Login
           </Link>
         </div>

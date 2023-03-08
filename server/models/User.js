@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const Trip = require('./Trip');
+// const Trip = require('./Trip');
 const bcrypt = require('bcrypt');
 
 
@@ -26,7 +26,10 @@ const userSchema = new Schema({
       required: true,
       minlength: 5
     },
-    trips: [Trip.schema]
+    trips: {
+        type: Schema.Types.ObjectId,
+        ref: 'Trip'
+    }
 });
 
 
