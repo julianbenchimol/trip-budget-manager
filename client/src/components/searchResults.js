@@ -16,7 +16,7 @@ const SearchResults = () =>{
 
   const queryHandler = function(event){
     setQuery(event.target.value)
-    console.log(query)
+    // console.log(query)
   }
 
   const handleFormSubmit = function(event){
@@ -24,7 +24,7 @@ const SearchResults = () =>{
     getLocationData(query)
   }
 
-console.log(query)
+// console.log(query)
   return(
     <div>
       <div className="container-fluid">

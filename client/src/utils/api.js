@@ -18,26 +18,26 @@ const searchLocation = (query) => {
         console.log("Basic Response: ", response)
         const locationSections = response.data.data.AppPresentation_queryAppSearch.sections;
         console.log("Location Sections: ", locationSections)
-        // const cards = []
+        const cards = []
 
-        // for(let card in locationSections){
-        //     if(locationSections[card].__typename === "AppPresentation_SingleCard"){
-        //         cards.push(locationSections[card].appSearchCardContent)
-        //     }
-        // }
-        // console.log("Location Cards: ", cards);
+        for(let card in locationSections){
+            if(locationSections[card].__typename === "AppPresentation_SingleCard"){
+                cards.push(locationSections[card].appSearchCardContent)
+            }
+        }
+        console.log("Location Cards: ", cards);
 
-        // const cardData = cards.map((card) =>{
-        //     return(
-        //         {
-        //             cardName: card.cardTitle.string,
-        //             cardInfo: card.primaryInfo.text,
-        //             cardId: card.saveId
-        //         }
-        //     )
-        // })
-        // console.log("Card Data: ", cardData)
-        // return cardData
+        const cardData = cards.map((card) =>{
+            return(
+                {
+                    cardName: card.cardTitle.string,
+                    cardInfo: card.primaryInfo.text,
+                    cardId: card.saveId
+                }
+            )
+        })
+        console.log("Card Data: ", cardData)
+        return cardData
     })
 }
 
