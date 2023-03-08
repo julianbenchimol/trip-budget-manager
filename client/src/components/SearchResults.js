@@ -1,6 +1,27 @@
-import axios from 'axios'
+import { useState, useEffect } from "react";
+import ResultList from "./ResultList";
+import axios from "axios";
 
-const searchLocation = (query) => {
+
+const SearchResults = () =>{
+      
+  const [query, setQuery] = useState("")
+  const [results, setResults] = useState([])
+
+  // const getLocationData = (query) =>{
+  //   setResults(searchLocation(query))
+  // }
+
+  const queryHandler = function(event){
+    setQuery(event.target.value)
+  }
+
+  const handleFormSubmit = function(event){
+    event.preventDefault();
+    searchLocation(query)
+  }
+
+  const searchLocation = (query) => {
     const queryOptions = {
         method: "POST",
         url: "https://travel-advisor.p.rapidapi.com/locations/v2/search",
@@ -37,8 +58,23 @@ const searchLocation = (query) => {
             )
         })
         console.log("Card Data: ", cardData)
-        return cardData
+        setResults(cardData)
     })
 }
 
-export default searchLocation
+  return(
+    <div>
+      <div className="container-fluid mt-5">
+        <div className="mb-4 " role='search'>
+          <form onSubmit={handleFormSubmit} className='d-flex'>
+            <input name="query" value={query} onChange={queryHandler} id = "location-value" className="form-control" placeholder="Start your search here!"/>
+            <button type = "submit" className="btn btn-primary ms-2">Search</button>
+          </form>
+        </div>
+      </div>
+      {results.length > 0 ? <ResultList results = {results}/> : null}
+    </div>
+  )
+}
+
+export default SearchResults

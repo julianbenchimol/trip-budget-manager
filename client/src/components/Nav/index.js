@@ -10,31 +10,31 @@ function Nav() {
                     <div className="container-fluid">
                         <p className="text-light fs-2 fst-italic fw-bold text-wrap mt-2" id="navBarText">Your travel planning Website!</p>
                     </div>
-                    <ul className="nav nav-tabs" id="navBar">
+                    <ul className="nav nav-tabs " id="navBar">
 
                         {/* Home */}
                         <li className="nav-item">
-                            <Link to = "/" className="nav-link">
+                            <Link to = "/" className="nav-link" id="navItem">
                                 Home
                             </Link>
                         </li>
 
                          {/* My Trips Tab: */}
                         <li className="nav-item">
-                            <Link to= "/mytrips" className="nav-link">
+                            <Link to= "/mytrips" className="nav-link" id="navItem">
                                 My Trips
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to= "/newtrip" className="nav-link">
+                            <Link to= "/newtrip" className="nav-link" id="navItem">
                                 New Trip
                             </Link>
                         </li>
 
                     {/* Logout Tab: */}
                         <li className="nav-item">
-                            <a href="/" onClick={()=> Auth.logout()} className='nav-link'>
+                            <a href="/" onClick={()=> Auth.logout()} className='nav-link' id="navItem">
                             Logout
                             </a>
                         </li>
@@ -51,22 +51,22 @@ function Nav() {
                         <ul className="nav nav-tabs" id="navBarItems">
 
                     {/* Home Tab */}
-                                                    <li className="nav-item">
-                            <Link to = "/" className="nav-link">
+                        <li className="nav-item">
+                            <Link to = "/" className="nav-link" id="navItem">
                                 Home
                             </Link>
                         </li>
 
                     {/* Signup Tab */}
                             <li className="nav-item">
-                                <Link to= "/signup" className="nav-link">
+                                <Link to= "/signup" className="nav-link" id="navItem">
                                     Signup
                                 </Link>
                             </li>
 
                     {/* Login Tab */}
                             <li className="nav-item">
-                                <Link to ="/login" className="nav-link">
+                                <Link to ="/login" className="nav-link" id="navItem">
                                     Login
                                 </Link>
                             </li>
