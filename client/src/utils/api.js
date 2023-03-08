@@ -7,7 +7,7 @@ const searchLocation = (query) => {
         params: {currency: 'USD', lang: 'en_US', units: 'mi'},
         headers: {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
+                'X-RapidAPI-Key': process.env.API_KEY,
                 'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
             },
             data: {"query": `"${query}"`, "updateToken": ""}
