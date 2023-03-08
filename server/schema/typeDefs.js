@@ -17,6 +17,12 @@ const typeDefs = gql`
     dates: [Int]!
   }
 
+   type Geoid {
+    _id: ID
+    hotelName: String!
+    hotelLocation: String!
+  }
+
   type Query {
     users: [User]
     trips: [Trip]

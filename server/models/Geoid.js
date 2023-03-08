@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const api = require('../../client/src/utils/api');
 const {Schema} = mongoose;
 
 const geoSchema = new Schema({
