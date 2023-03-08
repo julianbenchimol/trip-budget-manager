@@ -9,14 +9,12 @@ const SearchResults = () =>{
   const [results, setResults] = useState([])
 
   const getLocationData = (query) =>{
-    //event.preventDefault();
     const response = searchLocation(query)
     setResults(response)
   }
 
   const queryHandler = function(event){
     setQuery(event.target.value)
-    // console.log(query)
   }
 
   const handleFormSubmit = function(event){
@@ -24,7 +22,6 @@ const SearchResults = () =>{
     getLocationData(query)
   }
 
-// console.log(query)
   return(
     <div>
       <div className="container-fluid">
