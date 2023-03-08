@@ -2,20 +2,20 @@
 import Calendar from '../components/Calendar'
 function newTrip(){
     return(
-        <div className = "container-fluid ">
+        <div className = "container" id='body-container'>
             <h2 className='text-center mt-4 mb-5 fs-1 fst-italic fw-bold'>Plan A New Trip</h2>
 
-            <div className = "row">
+            <div className = "row d-flex justify-content-center">
 
                 {/* Calender Section */}
-                <div className = "col-6">
+                <div className = "col-md-6">
                     <Calendar />
                 </div>
 
                 {/* Forum Section: */}
-                <div className='col-6'>
+                <div className='col-md-6 bg-success p-2 text-dark bg-opacity-50 mt-5 mb-5' id='userCard'>
                     <form >
-                    <div>
+                    <div className='mt-3 fw-bold'>
                         {/* Location: */}
                         <label className='form-label'>
                             Location:
@@ -28,7 +28,7 @@ function newTrip(){
                     </div>
 
                         {/* Dates */}
-                        <div class="row g-3 mt-3 mb-2">
+                        <div class="row g-3 mt-2 mb-2 fw-bold">
                             <label className='form-label text-center'>Dates:</label>
                             <div class="col">
                                 <input type="text" className="form-control" placeholder="Start Date" aria-label="Start Date" />
@@ -38,17 +38,9 @@ function newTrip(){
                             </div>
                         </div>
 
-                        {/* Description */}
-                        <div>
-                            <div class="form-floating">
-                                <textarea className="form-control" placeholder="This will be the best trip ever!" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Trip Description:</label>
-                            </div>
-                        </div>
-
                         {/* Budget */}
-                        <div>
-                            <label className='form-label'>
+                        <div className='mt-3'>
+                            <label className='form-label fw-bold'>
                                 Budget:
                             </label>
                             <input 
@@ -59,7 +51,7 @@ function newTrip(){
                         </div>
 
                         {/* Button */}
-                        <div>
+                        <div className='mt-3 d-flex justify-content-center'>
                             <button type='submit' className='btn btn-primary'>
                                 + Create my trip!
                             </button>
