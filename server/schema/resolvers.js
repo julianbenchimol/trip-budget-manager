@@ -5,12 +5,12 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     trips: async () => {
-      // Populate the classes and professor subdocuments when querying for schools
+   
       return await Trip.find({});
     },
 
     users: async (parent, args) => {
-      // Populate the professor subdocument when querying for classes
+   
       return await User.find({});
     },
   },
@@ -23,9 +23,8 @@ const resolvers = {
     addTrip: async(parent, args, context) => {
       console.log(context);
       if (context.user) {
-        const mytrip = new Trip();
-        await User.findByIdAndUpdate(context.user._id, { $push: { trips: mytrip }} );
-        return mytrip;
+        const trips = await User.findByIdAndUpdate(context.user._id, { $push: { trips: args }}, {new: true} );
+        return trips;
       }
     },
     login: async (parent, { email, password }) => {

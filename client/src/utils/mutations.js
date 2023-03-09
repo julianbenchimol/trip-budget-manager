@@ -32,13 +32,16 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_TRIP = gql`
-mutation addTrip(
- $user: ID!
-){
-  addTrip(
-    name: $name
-    destination: $destination
-    budget:$budget
-    dates:$dates
-  )
-}`
+mutation AddTrip($name: String, $destination: String!, $budget: String!, $dates: String!) {
+  addTrip(name: $name, destination: $destination, budget: $budget, dates: $dates) {
+    _id
+    trips {
+      _id
+      name
+      destination
+      budget
+      dates
+    }
+  }
+}
+`
