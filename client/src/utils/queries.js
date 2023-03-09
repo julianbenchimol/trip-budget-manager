@@ -15,5 +15,12 @@ export const QUERY_USER = gql`
       firstName
       lastName
       email
+      trips{
+        name
+        destination
+        budget
+        dates
+
+      }
     }
   }`;

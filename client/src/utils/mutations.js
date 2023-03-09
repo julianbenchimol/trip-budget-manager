@@ -31,3 +31,14 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const ADD_TRIP = gql`
+mutation addTrip(
+ $user: ID!
+){
+  addTrip(
+    name: $name
+    destination: $destination
+    budget:$budget
+    dates:$dates
+  )
+}`
