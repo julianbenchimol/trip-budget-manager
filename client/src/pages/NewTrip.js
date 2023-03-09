@@ -26,7 +26,7 @@ const handleFormSubmit = async (event) => {
         const {data }= await newTrip({
             variables: { ...formData },
         });
-        navigate('/')
+        navigate('/mytrips')
     }catch (err) {
         console.error(err);
     }
