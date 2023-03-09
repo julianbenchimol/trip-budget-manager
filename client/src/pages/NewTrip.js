@@ -61,17 +61,14 @@ const handleFormSubmit = async (event) => {
                     </div>
 
                         {/* Dates */}
-                        <div class="row g-3 mt-2 mb-2 fw-bold">
-                            <label className='form-label text-center'>Dates:</label>
-                            <div class="col">
+                        <div className="mt-2 fw-bold">
+                            <label className='form-label'>Dates:</label>
+                            <div>
                                 <input type="text" 
                                 value = {formData.dates}
                                 name= "dates"
                                 onChange = {handleInputChange}
-                                    className="form-control" placeholder="Start Date" aria-label="Start Date" />
-                            </div>
-                            <div class="col">
-                                <input type="text" className="form-control" placeholder="End Date" aria-label="End Date" />
+                                    className="form-control" placeholder="Dates Traveling" aria-label="Dates Traveling" />
                             </div>
                         </div>
 
