@@ -1,63 +1,57 @@
-# SUPER AWESOME PROJECT WITH NO NAME YET BUT WE'RE WORKING ON IT!<sup>TM</sup>
+# Pack & Go
 
 ## Description
 
 This app allows users to collaborate on creating a travel planner. Users are able to set a desired location for their vacation, set a budget, and even browse for local hotels using a travel API. 
 
-- What was your motivation? idk travel and stuff
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.") because it was a homework assignment
-- What problem does it solve? travel and stuff
-- What did you learn? all about travel and stuff
+## Links
+Deployed site: <br>
+https://packandgo.herokuapp.com/ <br>
+Github site: <br>
+https://github.com/julianbenchimol/trip-budget-manager
 
-## Table of Contents (Optional)
-
-- [Installation](#installation)
-- [Features](#features)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
 ## Installation
+ - Clone repo locally.
+ - Go to root level of project.
+ - Run `npm run install`.
+ - Run `npm run develop`.
+ - The application will automatically open. 
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
-# Features
-
-If your project has a lot of features, list them here.
 
 ## Usage
+### Homepage without being logged in: 
+![Homepage without being logged in](client/public/images/Home.png)
+### Homepage when user is logged in:
+![Homepage being logged in](client/public/images/Home-signedin.png)
+### Sign-up page:
+![Sign-up page](client/public/images/Signup.png)
+### Login page:
+![Login page](client/public/images/Login.png)
+### My trips page:
+![My trips page](client/public/images/Mytrips.png)
+### New trips page:
+![New trips page](client/public/images/Newtrips.png)
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+  
 
 ## Credits
 
 List your collaborators, if any, with links to their GitHub profiles.
-- Kevin Bell (Insert GitHub Link Here)
-- Julian Benchimol (Insert GitHub Link Here)
-- Nate Hanisch (Insert GitHub Link Here)
-- Alex Frankhouser (Insert GitHub Link Here)
-- Cody Kirschbaum (Insert GitHub Link Here)
+- Kevin Bell <br>
+https://github.com/gitkcb
+- Julian Benchimol <br> 
+https://github.com/julianbenchimol
+- Nate Hanisch <br>
+https://github.com/HANIN003
+- Alex Frankhouser <br>
+https://github.com/A-Frankhouser
+- Cody Kirschbaum <br>
+https://github.com/baumerc10
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
 ## Badges
 
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+
